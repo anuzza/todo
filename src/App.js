@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./App.css";
+import Card from "./components/containers/Card";
 import Form from "./components/Form.js";
 import TodoList from "./components/TodoList.js";
 
@@ -23,11 +23,10 @@ function App() {
   };
 
   return (
-    <div>
-      <h1>Todo List</h1>
+    <Card>
       <Form onAdd={addTodo} />
       <TodoList todos={todos} updateTodo={updateTodo} deleteTodo={deleteTodo} />
-    </div>
+    </Card>
   );
 }
 

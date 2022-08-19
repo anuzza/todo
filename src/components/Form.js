@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import "./Form.css";
+import "./Form.css";
 
 const Form = (props) => {
   const [task, setTask] = useState("");
@@ -17,10 +17,18 @@ const Form = (props) => {
   };
 
   return (
-    <form onSubmit={formSubmitHandler}>
-      <label htmlFor="input">Add Task</label>
-      <input type="text" name="input" onChange={changeHandler} value={task} />
-      <button type="submit">Add</button>
+    <form onSubmit={formSubmitHandler} className="form">
+      <h1>Todo List</h1>
+      <div className="block">
+        <input
+          type="text"
+          name="input"
+          onChange={changeHandler}
+          value={task}
+          className="textbox"
+        />
+        <button type="submit">Add Task</button>
+      </div>
     </form>
   );
 };
